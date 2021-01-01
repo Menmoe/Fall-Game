@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top: 50px;
+    background-color: rgb(37, 37, 38);
+}
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: 400px;
+    left: 190px;
+    z-index: 1000000;
+}
+.block{
+    width: 400px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+.hole{
+    width: 40px;
+    height: 20px;
+    background-color:rgb(37, 37, 38);
+    position: relative;
+    top: 100px;
+    margin-top: -20px;
+}
+#score{
+    height: 75px;
+    width: 115px;
+    font-size: 35px;
+    background-color: rgb(37, 37, 38);
+    color: white;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+    left: 350px;
+    bottom: 400px;
+    text-align: center;
+}
+.dis{
+    height: 70px;
+    width: 200px;
+    position: relative;
+}
+#dis1{
+    bottom: 550px;
+    left: 450px;
+    transform: rotate(-10deg);
+}
+#dis2{
+    bottom: 300px;
+    left: 930px;
+    transform: rotate(-20deg);
+}
+#dis3{
+    bottom: 45px;
+    left: 55px;
+    transform: rotate(-25);
+}
+img{
+    position: relative;
+}
+#pause{
+    width: 50px;
+    height: 50px;
+    left: 496px;
+    bottom: 100px;
+    border-radius: 50%;
+    visibility: hidden;
+}
+#play{
+    width: 50px;
+    height: 50px;
+    left: 550px;
+    bottom: 100px;
+    border-radius: 50%;
+}
+#play:hover{cursor: pointer;}
+#pause:hover{cursor: pointer;}
+#settings{
+    width: 50px;
+    height: 50px;
+    left: 500px;
+    bottom: 100px;
+    border-radius: 50%;
+}
