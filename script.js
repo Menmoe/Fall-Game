@@ -5,6 +5,7 @@ var interval;
 var both = 0;
 var counter = 0;
 var currentBlocks = [];
+var paused = false;
 
 
 function moveLeft() {
@@ -78,14 +79,22 @@ var blocks = setInterval(function () {
         let iholeLeft = parseFloat(window.getComputedStyle(ihole).getPropertyValue("left"));
         iblock.style.top = iblockTop - 0.5 + "px";
         ihole.style.top = iblockTop - 0.5 + "px";
+        
         document.getElementById("play").onclick = function () {
             document.getElementById("play").style.visibility = 'hidden';
             document.getElementById("pause").style.visibility = 'visible';
+            paused = false;
         }
         document.getElementById("pause").onclick = function () {
             document.getElementById("pause").style.visibility = 'hidden';
             document.getElementById("play").style.visibility = 'visible';
-        }
+            paused = true;
+        
+        
+        if(paused)
+            iblock.style.top = iblockTop - 0 + "px";
+            ihole.style.top = iblockTop - 0 + "px";
+        
         function trackScore() {
             var liveScore = document.getElementById("score");
             var calc = liveScore.innerHTML = "Score:\n" + (counter - 5);
